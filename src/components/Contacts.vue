@@ -4,20 +4,9 @@
       <p>Ti piace quello che faccio?</p>
       <p>Contattami a questi link. A presto!</p>
       <div>
-        <a href="https://github.com/samuelemiotto" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-github" />
-          <span>Github</span>
-        </a>
-        <a href="https://www.linkedin.com/in/samuele-miotto/" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-linkedin" />
-          <span>LinkedIn</span>
-        </a>
-        <a
-          href="mailto:mioto.samuele@gmail.com?subject=Conosciamoci"
-          target="_blank"
-        >
-          <font-awesome-icon icon="fa-solid fa-envelope" />
-          <span>Email</span>
+        <a v-for="(link, i) in links" :key="i" :href="link.url" target="_blank">
+          <font-awesome-icon :icon="link.icon" />
+          <span>{{ link.title }}</span>
         </a>
       </div>
     </div>
@@ -27,7 +16,25 @@
 export default {
   name: "Contacts",
   data() {
-    return {};
+    return {
+      links: [
+        {
+          title: "Github",
+          url: "https://github.com/samuelemiotto",
+          icon: "fa-brands fa-github",
+        },
+        {
+          title: "LinkedIn",
+          url: "https://www.linkedin.com/in/samuele-miotto/",
+          icon: "fa-brands fa-linkedin",
+        },
+        {
+          title: "Email",
+          url: "mailto:mioto.samuele@gmail.com?subject=Conosciamoci",
+          icon: "fa-solid fa-envelope",
+        },
+      ],
+    };
   },
 };
 </script>
