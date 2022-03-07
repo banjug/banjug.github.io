@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <a href="#app" class="top-btn">Torna su</a>
+    <a href="#app" class="btn top-btn">Torna su</a>
+    <div class="btn links-btn">
+      <a href="#works">Lavori</a>
+      <a href="#about">Su di me</a>
+      <a href="#contacts">Contatti</a>
+    </div>
     <EmojiSmile />
     <Presentation />
     <div class="divider"></div>
@@ -50,22 +55,47 @@ export default {
   // margin-top: 60px;
 }
 
-.top-btn {
+.btn {
   position: fixed;
   right: 5%;
-  bottom: 5%;
   font-family: "DM Mono", monospace;
   background: #ffafcc;
   padding: 20px;
   z-index: 1;
   color: #000;
   transition: all 0.2s ease;
-  @media screen and (max-width: 768px) {
-    right: 10%;
-    bottom: 15%;
-  }
   &:hover {
     background: #fff;
+    + .links-btn {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &.top-btn {
+    bottom: 5%;
+    @media screen and (max-width: 768px) {
+      right: 10%;
+      bottom: 15%;
+    }
+  }
+  &.links-btn {
+    display: flex;
+    flex-direction: column;
+    bottom: 15%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+    &:hover {
+      visibility: visible;
+      opacity: 1;
+    }
+    a {
+      color: #000;
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }
 
