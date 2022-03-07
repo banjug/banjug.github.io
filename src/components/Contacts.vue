@@ -4,15 +4,18 @@
       <p>Ti piace quello che faccio?</p>
       <p>Contattami a questi link. A presto!</p>
       <div>
-        <a href="https://github.com/samuelemiotto">
+        <a href="https://github.com/samuelemiotto" target="_blank">
           <font-awesome-icon icon="fa-brands fa-github" />
           <span>Github</span>
         </a>
-        <a href="https://www.linkedin.com/in/samuele-miotto/">
+        <a href="https://www.linkedin.com/in/samuele-miotto/" target="_blank">
           <font-awesome-icon icon="fa-brands fa-linkedin" />
           <span>LinkedIn</span>
         </a>
-        <a href="mailto:mioto.samuele@gmail.com?subject=Conosciamoci">
+        <a
+          href="mailto:mioto.samuele@gmail.com?subject=Conosciamoci"
+          target="_blank"
+        >
           <font-awesome-icon icon="fa-solid fa-envelope" />
           <span>Email</span>
         </a>
@@ -53,14 +56,14 @@ section {
         font-family: "DM Mono", monospace;
         font-size: 4rem;
         margin-right: 2rem;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease;
         display: flex;
         flex-direction: column;
         span {
           opacity: 0;
           font-size: 1rem;
           margin-top: 0.5rem;
-          transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease;
           text-align: center;
         }
         &:hover {

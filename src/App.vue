@@ -59,8 +59,12 @@ export default {
   padding: 20px;
   z-index: 1;
   color: #000;
+  transition: all 0.2s ease;
   @media screen and (max-width: 768px) {
     right: 10%;
+  }
+  &:hover {
+    background: #fff;
   }
 }
 
