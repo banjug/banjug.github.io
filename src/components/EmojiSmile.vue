@@ -2,7 +2,7 @@
   <section>
     <div class="emoji-background">
       <h1 class="emoji">{{ emoji }}</h1>
-      <h1 class="title">Hello, world.</h1>
+      <h2 class="title">Hello, world.</h2>
     </div>
   </section>
 </template>
@@ -44,23 +44,34 @@ export default {
   background: linear-gradient(45deg, #f42, #a28, #42e, #a2f);
   background-size: 400% 400%;
   animation: Gradient 12s ease infinite;
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+  }
   h1 {
-    font-size: 50pt;
+    font-size: 8rem;
     font-family: "DM Mono", monospace;
-  }
-  .emoji {
     margin-bottom: 50px;
+    @media screen and (max-width: 768px) {
+        font-size: 40pt;
+      }
   }
-  @keyframes Gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  h2 {
+    font-size: 6rem;
+  @media screen and (max-width: 768px) {
+      font-size: 2rem;
   }
+  }
+  
 }
 </style>
