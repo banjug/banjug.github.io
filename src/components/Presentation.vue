@@ -1,8 +1,11 @@
-<template lang="">
+<template>
   <div>
     <div class="p-background">
       <div class="container">
-        
+        <div class="img">
+          <span class="hello-text">{{ helloText }}</span>
+          <img src="@/assets/portrait.png" alt="Samuele Miotto" class="portrait">
+        </div>
         <p
           v-for="(paragraph, i) in paragraphs"
           :key="i"
@@ -25,6 +28,9 @@ export default {
   name: "Presentation",
   data() {
     return {
+      helloText: '',
+      helloStrings: ['', '.', '..', '...', '...Hello!'],
+      loop : 0,
       paragraphs: [
         {
           text: "Benvenutǝ al mio portfolio. Mi chiamo Samuele e sono un web developer.",
@@ -38,6 +44,16 @@ export default {
       ],
     };
   },
+  methods: {
+    changeHello() {
+      this.helloText = this.helloStrings[this.loop];
+      this.loop = this.loop === this.helloStrings.length - 1 ? 0 : this.loop + 1;
+      return this.helloText;
+    }
+  },
+  mounted() {
+    setInterval(this.changeHello, 600);
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -50,6 +66,23 @@ export default {
     width: 70%;
     display: flex;
     flex-direction: column;
+    .img{
+      position: relative;
+      padding-top: 50px;
+      .hello-text {
+        color: #ffafcc;
+        font-family: "DM Mono", monospace;
+        text-align: left;
+        font-size: 30pt;
+        position: absolute;
+        left: 35%;
+        bottom: 20%;
+      }
+      .portrait {
+        width: 50%;
+        border-bottom: 10px solid #ffafcc;
+      }
+    }
     p {
       width: 60%;
       color: #ffafcc;

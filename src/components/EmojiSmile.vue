@@ -17,7 +17,7 @@ export default {
     };
   },
   methods: {
-    changeSmile: function () {
+    changeSmile() {
       this.emoji = this.emojiList[this.loop];
       this.loop = this.loop === this.emojiList.length - 1 ? 0 : this.loop + 1;
       return this.emoji;
