@@ -16,7 +16,8 @@
         <p class="p-r">
           Troverai una selezione dei miei <a href="#works">migliori lavori</a>,
           qualche <a href="#about">informazione su di me</a>, e tutti
-          <a href="#contacts">i miei contatti</a>, devi solo scrorrere in basso.
+          <a href="#contacts">i miei contatti</a>, scorri in basso oppure clicca
+          sulla sezione che ti interessa.
         </p>
       </div>
     </div>
@@ -63,7 +64,6 @@ export default {
       .hello-text {
         color: #ffafcc;
         font-family: "DM Mono", monospace;
-        text-align: left;
         font-size: 2rem;
         position: absolute;
         @media screen and (max-width: 768px) {

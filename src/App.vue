@@ -9,6 +9,7 @@
     <About id="about" />
     <div class="divider"></div>
     <Contacts id="contacts" />
+    <MyFooter />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Presentation from "./components/Presentation.vue";
 import Works from "./components/Works.vue";
 import About from "./components/About.vue";
 import Contacts from "./components/Contacts.vue";
+import MyFooter from "./components/MyFooter.vue";
 
 export default {
   name: "App",
@@ -27,6 +29,7 @@ export default {
     Works,
     About,
     Contacts,
+    MyFooter,
   },
 };
 </script>
