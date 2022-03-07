@@ -62,6 +62,7 @@ export default {
   transition: all 0.2s ease;
   @media screen and (max-width: 768px) {
     right: 10%;
+    bottom: 15%;
   }
   &:hover {
     background: #fff;

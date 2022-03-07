@@ -41,11 +41,18 @@ section {
     display: flex;
     flex-direction: column;
     padding: 5rem 0;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
     p {
       color: #ffafcc;
       font-family: "DM Mono", monospace;
       font-size: 2rem;
       width: 60%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 1.5rem;
+      }
     }
     div {
       display: flex;
@@ -65,11 +72,16 @@ section {
           margin-top: 0.5rem;
           transition: all 0.2s ease;
           text-align: center;
-        }
-        &:hover {
-          color: #fff;
-          span {
+          @media screen and (max-width: 768px) {
             opacity: 1;
+          }
+        }
+        @media screen and (min-width: 768px) {
+          &:hover {
+            color: #fff;
+            span {
+              opacity: 1;
+            }
           }
         }
       }

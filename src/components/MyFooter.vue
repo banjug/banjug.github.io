@@ -14,7 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  height: 20vh;
+  padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
