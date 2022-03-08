@@ -6,7 +6,7 @@
           <span class="hello-text">{{ helloText }}</span>
           <img
             src="@/assets/portrait-min.webp"
-            alt="Samuele Miotto"
+            alt="Samuele Miotto portrait"
             class="portrait"
           />
         </div>
@@ -62,8 +62,6 @@ export default {
       position: relative;
       padding-top: 50px;
       .hello-text {
-        color: #ffafcc;
-        font-family: "DM Mono", monospace;
         font-size: 2rem;
         position: absolute;
         @media screen and (max-width: 768px) {
@@ -83,8 +81,6 @@ export default {
     }
     p {
       width: 60%;
-      color: #ffafcc;
-      font-family: "DM Mono", monospace;
       font-size: 2rem;
       padding: 60px 0;
       @media screen and (max-width: 768px) {

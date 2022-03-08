@@ -34,8 +34,6 @@ section {
     }
   }
   p {
-    color: #ffafcc;
-    font-family: "DM Mono", monospace;
     font-size: 0.8rem;
     &:first-child {
       margin-bottom: 10px;

@@ -52,8 +52,6 @@ section {
       width: 90%;
     }
     p {
-      color: #ffafcc;
-      font-family: "DM Mono", monospace;
       font-size: 2rem;
       width: 60%;
       @media screen and (max-width: 768px) {
@@ -67,7 +65,6 @@ section {
       padding: 5rem 0 0;
       a {
         color: #ffafcc;
-        font-family: "DM Mono", monospace;
         font-size: 4rem;
         margin-right: 2rem;
         transition: all 0.2s ease;

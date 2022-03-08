@@ -64,6 +64,8 @@ export default {
 }
 #app {
   position: relative;
+  font-family: "DM Mono", monospace;
+  color: #ffafcc;
   // text-align: center;
   // color: #2c3e50;
   // margin-top: 60px;
