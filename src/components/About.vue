@@ -107,7 +107,7 @@ section {
           color: #fff;
           @media screen and (max-width: 768px) {
             padding: 0;
-            top: -1%;
+            top: 2%;
           }
         }
         img {
@@ -116,7 +116,7 @@ section {
           max-height: 100%;
           border-bottom: 10px solid #ffafcc;
           @media screen and (max-width: 768px) {
-            margin: 1rem 0;
+            margin: 2rem 0 1rem;
           }
         }
       }
