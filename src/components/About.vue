@@ -106,7 +106,8 @@ section {
           font-size: .8rem;
           color: #fff;
           @media screen and (max-width: 768px) {
-            padding: 1.5rem;
+            padding: 0;
+            top: -1%;
           }
         }
         img {
