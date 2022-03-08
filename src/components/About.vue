@@ -83,6 +83,9 @@ section {
     }
     h2 {
       font-size: 4rem;
+      @media screen and (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
     .grid-cont {
       @media screen and (min-width: 768px) {
