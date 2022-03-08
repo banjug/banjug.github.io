@@ -5,7 +5,7 @@
         <div class="img">
           <span class="hello-text">{{ helloText }}</span>
           <img
-            src="@/assets/portrait.webp"
+            src="@/assets/portrait-min.webp"
             alt="Samuele Miotto"
             class="portrait"
           />

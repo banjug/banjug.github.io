@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="#app" class="btn top-btn">Torna su</a>
+    <a href="#app" class="btn top-btn" v-if="scroll > 800">Torna su</a>
     <div class="btn links-btn">
       <a href="#works">Lavori</a>
       <a href="#about">Su di me</a>
@@ -36,6 +36,20 @@ export default {
     Contacts,
     MyFooter,
   },
+  data() {
+    return {
+      scroll: 0,
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.getScroll)
+  },
+  methods: {
+    getScroll() {
+      this.scroll = window.scrollY;
+      console.log(this.scroll);
+    }
+  },
 };
 </script>
 
@@ -64,19 +78,21 @@ export default {
   z-index: 1;
   color: #000;
   transition: all 0.2s ease;
-  &:hover {
-    background: #fff;
-    + .links-btn {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
   &.top-btn {
     bottom: 5%;
     @media screen and (max-width: 768px) {
       right: 10%;
       bottom: 15%;
     }
+      &:hover {
+        background: #fff;
+        @media screen and (min-width: 768px) {
+          + .links-btn {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
   }
   &.links-btn {
     display: flex;
@@ -85,15 +101,18 @@ export default {
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s ease;
+    padding: 0;
     &:hover {
       visibility: visible;
       opacity: 1;
     }
     a {
-      color: #000;
-      &:nth-child(1),
-      &:nth-child(2) {
-        margin-bottom: 0.5rem;
+      padding: 20px;
+      color: #111;
+      &:hover {
+        color: #000;
+        background: #fff;
+
       }
     }
   }
@@ -101,6 +120,23 @@ export default {
 
 .divider {
   height: 20px;
-  background-color: #ffafcc;
+  background: repeating-linear-gradient(
+    90deg,	
+    #ffafcc,
+    #ffafcc 50px,
+    #111 50px,
+    #111 100px
+  );
+  background-size: 200% 100%;
+  animation: Background 60s linear infinite;
+  @keyframes Background {
+    from {
+      background-position: right;
+    }
+    to {
+      background-position: left;
+    }
+  }
+  // background-color: #ffafcc;
 }
 </style>
