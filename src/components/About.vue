@@ -15,7 +15,7 @@
       </p>
       <div class="grid-cont">
         <div class="grid-img">
-          <img src="@/assets/portrait_2.jpg" alt="Samuele Miotto portrait">
+          <img src="@/assets/portrait_2-min.jpg" alt="Samuele Miotto portrait">
           <span class="img-label">Questo sono io nella mia casa a Mestre.</span>
         </div>
         <div class="grid-p">
