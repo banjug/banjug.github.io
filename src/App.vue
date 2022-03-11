@@ -47,7 +47,6 @@ export default {
   methods: {
     getScroll() {
       this.scroll = window.scrollY;
-      console.log(this.scroll);
     }
   },
 };
@@ -82,13 +81,13 @@ export default {
   transition: all 0.2s ease;
   &.top-btn {
     bottom: 5%;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 960px) {
       right: 10%;
       bottom: 15%;
     }
       &:hover {
         background: #fff;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 960px) {
           + .links-btn {
             visibility: visible;
             opacity: 1;

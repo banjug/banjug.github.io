@@ -55,7 +55,7 @@ export default {
     width: 70%;
     display: flex;
     flex-direction: column;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 960px) {
       width: 90%;
     }
     .img {
@@ -64,7 +64,7 @@ export default {
       .hello-text {
         font-size: 2rem;
         position: absolute;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 960px) {
           left: 60%;
           font-size: 1.5rem;
         }
@@ -72,7 +72,7 @@ export default {
         bottom: 20%;
       }
       .portrait {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 960px) {
           width: 100%;
         }
         width: 50%;
@@ -83,7 +83,7 @@ export default {
       width: 60%;
       font-size: 2rem;
       padding: 60px 0;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 960px) {
         width: 100%;
         font-size: 1.5rem;
       }

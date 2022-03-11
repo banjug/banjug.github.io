@@ -30,7 +30,7 @@ export default {
         },
         {
           title: "Email",
-          url: "mailto:mioto.samuele@gmail.com?subject=Conosciamoci",
+          url: "mailto:miotto.samuele@gmail.com",
           icon: "fa-solid fa-envelope",
         },
       ],
@@ -48,13 +48,15 @@ section {
     display: flex;
     flex-direction: column;
     padding: 5rem 0;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 960px
+    ) {
       width: 90%;
     }
     p {
       font-size: 2rem;
       width: 60%;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 960px
+      ) {
         width: 100%;
         font-size: 1.5rem;
       }
@@ -76,11 +78,13 @@ section {
           margin-top: 0.5rem;
           transition: all 0.2s ease;
           text-align: center;
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 960px
+          ) {
             opacity: 1;
           }
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 960px
+        ) {
           &:hover {
             color: #fff;
             span {
