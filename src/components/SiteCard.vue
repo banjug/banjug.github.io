@@ -66,6 +66,7 @@ div {
     .overlay{
       display: flex;
       align-items: flex-end;
+      transition: all .2s;
       @media screen and (min-width: 960px) {
         position: absolute;
         top: 0;
