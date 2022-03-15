@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       links: [
+        // Link dei contatti
         {
           title: "Github",
           url: "https://github.com/samuelemiotto",
@@ -40,7 +41,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  background: #111;
   display: flex;
   justify-content: center;
   .container {
@@ -48,14 +48,14 @@ section {
     display: flex;
     flex-direction: column;
     padding: 5rem 0;
-    @media screen and (max-width: 960px
+    @media (max-width: 960px
     ) {
       width: 90%;
     }
     p {
       font-size: 2rem;
       width: 60%;
-      @media screen and (max-width: 960px
+      @media (max-width: 960px
       ) {
         width: 100%;
         font-size: 1.5rem;
@@ -78,12 +78,12 @@ section {
           margin-top: 0.5rem;
           transition: all 0.2s ease;
           text-align: center;
-          @media screen and (max-width: 960px
+          @media (max-width: 960px
           ) {
             opacity: 1;
           }
         }
-        @media screen and (min-width: 960px
+        @media (min-width: 960px
         ) {
           &:hover {
             color: #fff;

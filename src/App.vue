@@ -1,19 +1,33 @@
 <template>
   <div id="app">
+    <!-- Pulsante per tornare in cima (appare se lo scroll è superiore a 800px, scompare se inferiore) -->
     <a href="#app" class="btn top-btn" v-if="scroll > 800">Torna su</a>
+    <!-- Pulsante con i link alle varie sezioni (appare all'hover sull'altro pulsante) -->
     <div class="btn links-btn">
       <a href="#works">Lavori</a>
       <a href="#about">Su di me</a>
       <a href="#contacts">Contatti</a>
     </div>
+
+    <!-- Componenti VUE -->
+
+    <!-- Componente con lo smile -->
     <EmojiSmile />
+    <!-- Componente con foto, presentazione e link -->
     <Presentation />
-    <div class="divider"></div>
+    <!-- Divisore tratteggiato -->
+    <div class="divider"></div> 
+    <!-- Componente con lavori (portfolio) -->
     <Works id="works" />
-    <div class="divider"></div>
+    <!-- Divisore tratteggiato -->
+    <div class="divider"></div> 
+    <!-- Componente con descrizione dettagliata di chi sono -->
     <About id="about" />
-    <div class="divider"></div>
+    <!-- Divisore tratteggiato -->
+    <div class="divider"></div> 
+    <!-- Componente contatti personali -->
     <Contacts id="contacts" />
+    <!-- Componente footer -->
     <MyFooter />
   </div>
 </template>
@@ -38,15 +52,15 @@ export default {
   },
   data() {
     return {
-      scroll: 0,
+      scroll: 0, // Valore dello scroll della pagina
     }
   },
   created() {
-    window.addEventListener('scroll', this.getScroll)
+    window.addEventListener('scroll', this.getScroll) // Ascolta quanto la pagina è stata scrollata richiamando getScroll
   },
   methods: {
     getScroll() {
-      this.scroll = window.scrollY;
+      this.scroll = window.scrollY; // Associa alla variabile scroll (data) il valore dello scroll verticale
     }
   },
 };
@@ -55,7 +69,7 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:ital@0;1&display=swap");
 
-* {
+* { // Reset
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -65,29 +79,27 @@ export default {
   position: relative;
   font-family: "DM Mono", monospace;
   color: #ffafcc;
-  // text-align: center;
-  // color: #2c3e50;
-  // margin-top: 60px;
+  background: #111;
 }
 
-.btn {
+.btn { // Pulsante per tornare in cima e link
   position: fixed;
   right: 5%;
   font-family: "DM Mono", monospace;
   background: #ffafcc;
-  padding: 20px;
+  padding: 1.2rem;
   z-index: 1;
   color: #000;
   transition: all 0.2s ease;
   &.top-btn {
     bottom: 5%;
-    @media screen and (max-width: 960px) {
+    @media (max-width: 960px) {
       right: 10%;
       bottom: 15%;
     }
       &:hover {
         background: #fff;
-        @media screen and (min-width: 960px) {
+        @media (min-width: 960px) {
           + .links-btn {
             visibility: visible;
             opacity: 1;
@@ -108,7 +120,7 @@ export default {
       opacity: 1;
     }
     a {
-      padding: 20px;
+      padding: 1.2rem;
       color: #111;
       &:hover {
         color: #000;
@@ -119,14 +131,14 @@ export default {
   }
 }
 
-.divider {
-  height: 20px;
+.divider { // Divisore tratteggiato
+  height: 1.2rem;
   background: repeating-linear-gradient(
     90deg,	
     #ffafcc,
-    #ffafcc 50px,
-    #111 50px,
-    #111 100px
+    #ffafcc 3rem,
+    #111 3rem,
+    #111 6.2rem
   );
   background-size: 200% 100%;
   animation: Background 60s linear infinite;
@@ -138,6 +150,5 @@ export default {
       background-position: left;
     }
   }
-  // background-color: #ffafcc;
 }
 </style>
