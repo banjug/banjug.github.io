@@ -1,10 +1,14 @@
 <template>
-  <form ref="form" @submit.prevent="sendEmail">
-    <input type="text" name="user_name" placeholder="Nome"/>
-    <input type="email" name="user_email" placeholder="Email"/>
-    <textarea name="message" rows="10" placeholder="Scrivi il tuo messaggio"></textarea>
-    <input type="submit" value="Invia" class="form-btn"/>
-  </form>
+    <form ref="form" @submit.prevent="sendEmail">
+      <label>* Campi obbligatori</label>
+      <input type="text" name="user_name" placeholder="Nome"/>
+      <input type="email" name="user_email" placeholder="Email *" required/>
+      <textarea name="message" rows="10" placeholder="Scrivi il tuo messaggio *" required></textarea>
+      <input type="submit" name="button" value="Invia" class="form-btn"/>
+    <div v-if="sent">
+      Messaggio inviato!
+    </div>
+    </form>
 </template>
 
 <script>
@@ -12,6 +16,11 @@ import emailjs from "@emailjs/browser";
 
 export default {
   name: "ContactForm",
+  data() {
+    return {
+      sent: false,
+    }
+  },
   methods: {
     sendEmail() {
       emailjs
@@ -28,6 +37,12 @@ export default {
           (error) => {
             console.log("FAILED...", error.text);
           }
+        )
+        .then(
+          this.sent = true
+        )
+        .then(
+          this.$refs.form.reset()
         );
     },
   },
