@@ -60,7 +60,7 @@ export default {
     }
     .img {
       position: relative;
-      padding-top: 50px;
+      padding-top: 3rem;
       .hello-text {
         font-size: 2rem;
         position: absolute;
@@ -76,13 +76,13 @@ export default {
           width: 100%;
         }
         width: 50%;
-        border-bottom: 10px solid #ffafcc;
+        border-bottom: .7rem solid #ffafcc;
       }
     }
     p {
       width: 60%;
       font-size: 2rem;
-      padding: 60px 0;
+      padding: 4rem 0;
       @media (max-width: 960px) {
         width: 100%;
         font-size: 1.5rem;

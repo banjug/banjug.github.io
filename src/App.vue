@@ -65,9 +65,6 @@ export default {
   position: relative;
   font-family: "DM Mono", monospace;
   color: #ffafcc;
-  // text-align: center;
-  // color: #2c3e50;
-  // margin-top: 60px;
 }
 
 .btn {
@@ -75,7 +72,7 @@ export default {
   right: 5%;
   font-family: "DM Mono", monospace;
   background: #ffafcc;
-  padding: 20px;
+  padding: 1.2rem;
   z-index: 1;
   color: #000;
   transition: all 0.2s ease;
@@ -108,7 +105,7 @@ export default {
       opacity: 1;
     }
     a {
-      padding: 20px;
+      padding: 1.2rem;
       color: #111;
       &:hover {
         color: #000;
@@ -120,13 +117,13 @@ export default {
 }
 
 .divider {
-  height: 20px;
+  height: 1.2rem;
   background: repeating-linear-gradient(
     90deg,	
     #ffafcc,
-    #ffafcc 50px,
-    #111 50px,
-    #111 100px
+    #ffafcc 3rem,
+    #111 3rem,
+    #111 6.2rem
   );
   background-size: 200% 100%;
   animation: Background 60s linear infinite;
@@ -138,6 +135,5 @@ export default {
       background-position: left;
     }
   }
-  // background-color: #ffafcc;
 }
 </style>

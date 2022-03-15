@@ -91,7 +91,7 @@ section {
       @media (min-width: 960px) {
       display: grid; 
       grid-template-columns: 2fr 3fr; 
-      gap: 0px 0px; 
+      gap: 0 0; 
       }
       .grid-img {
         position: relative;
@@ -111,7 +111,7 @@ section {
           object-fit: cover;
           width: 100%;
           max-height: 100%;
-          border-bottom: 10px solid #ffafcc;
+          border-bottom: .7rem solid #ffafcc;
           @media (max-width: 960px) {
             margin: 2rem 0 1rem;
           }

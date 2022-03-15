@@ -36,7 +36,7 @@ section {
   p {
     font-size: 0.8rem;
     &:first-child {
-      margin-bottom: 10px;
+      margin-bottom: .7rem;
     }
   }
 }

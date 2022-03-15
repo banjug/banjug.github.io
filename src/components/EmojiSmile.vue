@@ -61,7 +61,7 @@ export default {
   h1 {
     font-size: 8rem;
     font-family: "DM Mono", monospace;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
     @media (max-width: 960px) {
         font-size: 40pt;
       }
