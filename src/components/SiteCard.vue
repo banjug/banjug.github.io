@@ -48,13 +48,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 div {
-  @media screen and (min-width: 960px) {
+  @media (min-width: 960px) {
     position: relative;
   }
     .site-cont {
     width: 100%;
     text-decoration: none;
-    @media screen and (max-width: 960px) {
+    @media (max-width: 960px) {
       border-top: 1px solid #ffafcc;
       margin-top: 1rem;
     }
@@ -67,7 +67,7 @@ div {
       display: flex;
       align-items: flex-end;
       transition: all .2s;
-      @media screen and (min-width: 960px) {
+      @media (min-width: 960px) {
         position: absolute;
         top: 0;
         right: 0;
@@ -79,7 +79,7 @@ div {
       p {
         color: #fff;
         padding: 1rem 1rem 2rem;
-        @media screen and (max-width: 960px) {
+        @media (max-width: 960px) {
           padding: 1rem 0;
           border-top: 1px solid #ffafcc;
         }

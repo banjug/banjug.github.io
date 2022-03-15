@@ -86,7 +86,7 @@ section {
     display: flex;
     flex-direction: column;
     padding: 5rem 0;
-    @media screen and (max-width: 960px) {
+    @media (max-width: 960px) {
       width: 90%;
     }
     .works-presentation {
@@ -97,7 +97,7 @@ section {
       h2 {
         font-size: 4rem;
         margin-bottom: 3rem;
-        @media screen and (max-width: 960px) {
+        @media (max-width: 960px) {
           font-size: 3rem;
         }
       }
@@ -105,20 +105,10 @@ section {
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
       gap: 2em 2em;
       grid-auto-flow: row;
-      grid-template-areas:
-        ". ."
-        ". .";
-      @media screen and (max-width: 960px) {
+      @media (max-width: 960px) {
         grid-template-columns: 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-        grid-template-areas: 
-          "."
-          "."
-          "."
-          "."; 
       }
     }
   }

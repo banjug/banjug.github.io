@@ -78,25 +78,22 @@ section {
     display: flex;
     flex-direction: column;
     padding: 5rem 0;
-    @media screen and (max-width: 960px) {
+    @media (max-width: 960px) {
       width: 90%;
     }
     h2 {
       font-size: 4rem;
-      @media screen and (max-width: 960px) {
+      @media (max-width: 960px) {
         font-size: 3rem;
       }
     }
     .grid-cont {
-      @media screen and (min-width: 960px) {
+      @media (min-width: 960px) {
       display: grid; 
       grid-template-columns: 2fr 3fr; 
-      grid-template-rows: 1fr; 
       gap: 0px 0px; 
-      grid-template-areas: "img p";
       }
       .grid-img {
-        grid-area: img;
         position: relative;
         .img-label {
           position: absolute;
@@ -105,7 +102,7 @@ section {
           padding: .5rem 1rem;
           font-size: .8rem;
           color: #fff;
-          @media screen and (max-width: 960px) {
+          @media (max-width: 960px) {
             padding: 0;
             top: 2%;
           }
@@ -115,13 +112,12 @@ section {
           width: 100%;
           max-height: 100%;
           border-bottom: 10px solid #ffafcc;
-          @media screen and (max-width: 960px) {
+          @media (max-width: 960px) {
             margin: 2rem 0 1rem;
           }
         }
       }
       .grid-p {
-        grid-area: p;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -132,7 +128,7 @@ section {
       width: 60%;
       margin: 1rem 0;
       font-size: 1.2rem;
-      @media screen and (max-width: 960px) {
+      @media (max-width: 960px) {
         width: 100%;
       }
       &.r {

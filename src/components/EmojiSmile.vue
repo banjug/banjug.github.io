@@ -55,20 +55,20 @@ export default {
         background-position: 0% 50%;
       }
     }
-  @media screen and (max-width: 960px) {
+  @media (max-width: 960px) {
     height: 50vh;
   }
   h1 {
     font-size: 8rem;
     font-family: "DM Mono", monospace;
     margin-bottom: 50px;
-    @media screen and (max-width: 960px) {
+    @media (max-width: 960px) {
         font-size: 40pt;
       }
   }
   h2 {
     font-size: 6rem;
-  @media screen and (max-width: 960px) {
+  @media (max-width: 960px) {
       font-size: 2rem;
   }
   }
