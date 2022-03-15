@@ -8,15 +8,28 @@
           <font-awesome-icon :icon="link.icon" />
           <span>{{ link.title }}</span>
         </a>
+        <a class="email-btn">
+          <font-awesome-icon icon="fa-solid fa-envelope" @click="emailClick"/>
+          <span>Email</span>
+        </a>
+        
       </div>
+      <transition name="expand">
+        <ContactForm v-if="email"/>      
+      </transition>
     </div>
   </section>
 </template>
+
 <script>
+import ContactForm from './ContactForm.vue';
+
 export default {
+  components: { ContactForm },
   name: "Contacts",
   data() {
     return {
+      email: false,
       links: [
         // Link dei contatti
         {
@@ -29,13 +42,13 @@ export default {
           url: "https://www.linkedin.com/in/samuele-miotto/",
           icon: "fa-brands fa-linkedin",
         },
-        {
-          title: "Email",
-          url: "mailto:miotto.samuele@gmail.com",
-          icon: "fa-solid fa-envelope",
-        },
       ],
     };
+  },
+  methods: {
+    emailClick() {
+      this.email = !this.email;
+    }
   },
 };
 </script>
@@ -72,12 +85,14 @@ section {
         transition: all 0.2s ease;
         display: flex;
         flex-direction: column;
+        cursor: pointer;
         span {
           opacity: 0;
           font-size: 1rem;
           margin-top: 0.5rem;
           transition: all 0.2s ease;
           text-align: center;
+          text-decoration: underline;
           @media (max-width: 960px
           ) {
             opacity: 1;
@@ -94,6 +109,17 @@ section {
         }
       }
     }
+  }
+  .expand-enter-active,
+  .expand-leave-active {
+    transition: max-height 1s ease;
+    max-height: 100%;
+  }
+
+  .expand-enter,
+  .expand-leave-to {
+    max-height: 0;
+    overflow: hidden;
   }
 }
 </style>
