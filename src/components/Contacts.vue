@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       links: [
+        // Link dei contatti
         {
           title: "Github",
           url: "https://github.com/samuelemiotto",

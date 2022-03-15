@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="emoji-background">
+      <!-- Animazione emoji in loop -->
       <h1 class="emoji">{{ emoji }}</h1>
       <h2 class="title">Hello, world.</h2>
     </div>
@@ -11,20 +12,20 @@ export default {
   name: "EmojiSmile",
   data() {
     return {
-      emojiList: ["~(｡0‿0｡)_", "_(｡-‿-｡)~", "~(｡-‿-｡)_", "_(｡0‿0｡)~"],
-      loop: 0,
-      emoji: "",
+      emojiList: ["~(｡0‿0｡)_", "_(｡-‿-｡)~", "~(｡-‿-｡)_", "_(｡0‿0｡)~"], // Lista delle emoji da loopare
+      loop: 0, // Valore del loop (aumenta al cambio di emoji)
+      emoji: "", // Emoji attuale
     };
   },
   methods: {
     changeSmile() {
-      this.emoji = this.emojiList[this.loop];
-      this.loop = this.loop === this.emojiList.length - 1 ? 0 : this.loop + 1;
+      this.emoji = this.emojiList[this.loop]; // Associa alla variabile emoji l'emoji all'indice indicato dalla variabile loop (TODO si potrebbe randomizzare)
+      this.loop = this.loop === this.emojiList.length - 1 ? 0 : this.loop + 1; // Aumenta il valore di loop ogni volta che cambia emoji, se è arrivato alla fine della lista torna a 0
       return this.emoji;
     },
   },
   mounted() {
-    setInterval(this.changeSmile, 600);
+    setInterval(this.changeSmile, 600); // Cambia emoji ogni 600 millisecondi
   },
 };
 </script>
@@ -41,7 +42,8 @@ export default {
   background-color: #f24;
   color: #eee;
 
-  background: linear-gradient(45deg, #f42, #a28, #42e, #a2f);
+  // Animazione dello sfondo con gradiente, il gradiente è grande il 400% del div e viene spostato da una parte all'altra in un'animazione che dura 12 secondi
+  background: linear-gradient(45deg, #f42, #a28, #42e, #a2f); 
   background-size: 400% 400%;
   animation: Gradient 12s ease infinite;
     @keyframes Gradient {

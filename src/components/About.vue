@@ -141,6 +141,7 @@ section {
         color: #fff;
       }
       a {
+        // Animazione dello sfondo con gradiente, il gradiente è grande il 400% del testo e all'hover viene spostato da una parte all'altra in un'animazione che dura 12 secondi
         background: linear-gradient(45deg, #f42, #a28, #42e, #a2f);
         background-clip: text;
         color: transparent;

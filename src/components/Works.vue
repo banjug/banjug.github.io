@@ -2,13 +2,14 @@
   <section>
     <div class="container">
       <div class="works-presentation">
-        <h2>Cosa ho fatto{{ exclamation }}</h2>
+        <h2>Cosa ho fatto{{ exclamation }}</h2> <!-- Animazione in loop dei punti alla fine del titolo -->
         <p>Qui c'è qualche esempio dei progetti portati a termine durante il bootcamp.</p>
         <p>Partendo layout grafici statici ho prodotto il front-end.</p>
         <p>Vuoi visitarli? Basta cliccare sull'immagine.</p>
       </div>
       <div class="grid-container">
 
+        <!-- Componente per le card dei singoli siti -->
         <SiteCard
         v-for="site, i in sites"
         :key="i"
@@ -29,10 +30,11 @@ export default {
   },
   data() {
     return {
-      exclamationList: ['!', '??', '.', '!?', '..', '?', '!!', '?'],
-      loop: 0,
-      exclamation: '',
+      exclamationList: ['!', '??', '.', '!?', '..', '?', '!!', '?'], // Lista delle stringhe da loopare
+      loop: 0, // Valore del loop (aumenta al cambio di stringa)
+      exclamation: '', // Stringa attuale
       sites: [
+        // Dati dei siti da passare al componente SiteCard
         {
           title: 'WhatsApp Web',
           url: 'https://clone-whatsapp-webapp.netlify.app/',
@@ -66,13 +68,13 @@ export default {
   },
   methods: {
       changeExclamaion() {
-      this.exclamation = this.exclamationList[this.loop];
-      this.loop = this.loop === this.exclamationList.length - 1 ? 0 : this.loop + 1;
+      this.exclamation = this.exclamationList[this.loop]; // Associa alla variabile exclamation la stringa all'indice indicato dalla variabile loop
+      this.loop = this.loop === this.exclamationList.length - 1 ? 0 : this.loop + 1; // Aumenta il valore di loop ogni volta che cambia stringa, se è arrivato alla fine della lista torna a 0
       return this.exclamation;
     },
   },
   mounted() {
-    setInterval(this.changeExclamaion, 300);
+    setInterval(this.changeExclamaion, 300); // Cambia stringa ogni 300 millisecondi
   },
 };
 </script>
