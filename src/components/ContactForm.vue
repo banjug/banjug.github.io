@@ -1,10 +1,7 @@
 <template>
   <form ref="form" @submit.prevent="sendEmail">
-    <!-- <label>Nome</label> -->
     <input type="text" name="user_name" placeholder="Nome"/>
-    <!-- <label>Email</label> -->
     <input type="email" name="user_email" placeholder="Email"/>
-    <!-- <label>Messaggio</label> -->
     <textarea name="message" rows="10" placeholder="Scrivi il tuo messaggio"></textarea>
     <input type="submit" value="Invia" class="form-btn"/>
   </form>
@@ -52,7 +49,7 @@ form {
     margin: .5rem 0 1rem;
   }
 }
-.form-btn { // Pulsante per tornare in cima e link
+.form-btn {
   text-decoration: underline;
   background: #ffafcc;
   padding: 1.2rem;
