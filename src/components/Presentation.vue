@@ -48,7 +48,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .p-background {
-  background: #111;
   display: flex;
   justify-content: center;
   .container {

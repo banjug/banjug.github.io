@@ -65,6 +65,7 @@ export default {
   position: relative;
   font-family: "DM Mono", monospace;
   color: #ffafcc;
+  background: #111;
 }
 
 .btn {

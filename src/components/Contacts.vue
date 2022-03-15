@@ -40,7 +40,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  background: #111;
   display: flex;
   justify-content: center;
   .container {
